@@ -1,0 +1,24 @@
+
+
+
+
+#header{
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    enter: 0;
+    width: 100%;
+    height: 10px;
+}
+
+
+body{
+    background-image: url(../img/Halloween.jpg);
+    padding: 400px 100px;
+    margin: 100px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
