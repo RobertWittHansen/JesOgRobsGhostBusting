@@ -14,13 +14,19 @@ public class EventController
 {
     private ArrayList<String> events;
 
-    @GetMapping("/event")
-    public String event()
+    @GetMapping("/")
+    public String index()
     {
         return "event";
     }
 
-    @PostMapping("/sign-up")
+    // Showing how to create a form using thymeleaf
+    @GetMapping("/event")
+    public String renderForm() {
+        return "event";
+    }
+
+    @PostMapping("/event")
     public String cerateNewUser(@RequestParam("fname") String fname, @RequestParam("lname") String lname,@RequestParam("date") String date)
     {
         Event1 event = new Event1(fname, lname, date);
@@ -28,14 +34,10 @@ public class EventController
         return "redirect:/event"; // sender det til en anden URL
     }
 
-    // Showing how to create a form using thymeleaf
-    @GetMapping(value = "/submit")
-    @ResponseBody
-    public String renderForm() {
-        return "submit";
-    }
+
 
 
 
 
 }
+
